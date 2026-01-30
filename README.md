@@ -18,11 +18,11 @@
 - モーダル表示でのナビゲーション実装
 
 ## 公開URL
-[公開URLはこちら](https://takemura-cloud.github.io/LAVENE---Portfolio-Site/lavene/)
+[公開URLはこちら](https://takemura-chihiro.com)
 
 ## スクリーンショット
 メインビジュアル  
-![トップページ](sandai/screenshots/sandai-main.png)
+![トップページ](ogp.png)
 
 ##公開URL
 
