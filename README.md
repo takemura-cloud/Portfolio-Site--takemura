@@ -14,6 +14,11 @@
 ## ポイント
 - PC/SP 両対応のデザインを制作  
 - 基本的な JavaScript によるナビゲーション切り替えを実装
+- メインビジュアルにスライダーを導入
+- モーダル表示でのナビゲーション実装
+
+## 公開URL
+[公開URLはこちら](https://takemura-cloud.github.io/LAVENE---Portfolio-Site/lavene/)
 
 ## スクリーンショット
 メインビジュアル  
