@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: https://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="フロントエンドエンジニア/コーダーを目指す竹村千紘のポートフォリオサイトです。">
+    <!-- ogp -->
+     <meta property="og:url" content="https://takemura-chihiro.com">
+     <meta property="og:type" content="website">
+     <meta property="og:title" content="TAKEMURA CHIHIRO PORTFOLIO">
+     <meta property="og:description" content="フロントエンドエンジニア/コーダーを目指す竹村千紘のポートフォリオサイトです。">
+     <meta property="og:site_name" content="TAKEMURA CHIHIRO PORTFOLIO">
+     <meta property="og:image" content="https://takemura-chihiro.com/assets/images/photo/ogp.png">
+    <!-- favicon apple-touch-icon -->
+    <link rel="shortcut icon" href="assets/images/parts/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/parts/apple-touch-icon.svg">
+    <link rel="icon" type="image/png" href="assets/images/parts/android-chrome-256x256.svg">
+
+    <title>TAKEMURA CHIHIRO PORTFOLIO</title>
+
+    <!-- web font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+    <!-- css -->
+     <link rel="stylesheet" href="assets/css/destyle.css">
+     <link rel="stylesheet" href="assets/css/style.css">
+</head>
+    <body>
+        <div id="container" class="container">
+            <header class="header">
+                <h1 class="site-title">
+                    <a href="index.html">
+                        TCP
+                    </a>
+                </h1>
+                <!-- .header__btn -->
+                <button class="nav__btn nav__btn--open" type="button" aria-label="メニューを開く" aria-controls="global-nav" aria-expanded="false">
+                    <img src="assets/images/parts/btn_hamburger.svg" alt="">
+                </button>
+                <nav id="global-nav" class="nav js-nav-modal" aria-hidden="true">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#works" class="c-nav-link">WORKS</a></li>
+                        <li class="nav__item"><a href="#profile" class="c-nav-link">PROFILE</a></li>
+                        <li class="nav__item"><a href="#contact" class="c-nav-link">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <main class="main">
+            <article class="article">
+            <!-- main visual -->
+                <section id="main-visual" class="section section--main-visual" aria-label="メインビジュアル">
+                    <div class="main-visual__content">
+                        <h2 class="section-title section-title--main-visual">TAKEMURA<br>CHIHIRO<br>PORTFOLIO</h2>
+                        <p class="section-subtitle">Frontend engineer / Coder</p>
+                    </div>
+                    <div class="main-visual__slider">
+                        <div class="main-visual__slide">
+                            <img src="assets/images/photo/mainvisual-01.png" class="main-visual__slide-img" alt="" loading="eager">
+                        </div>
+                        <div class="main-visual__slide">
+                            <img src="assets/images/photo/mainvisual-02.png" class="main-visual__slide-img" alt="" loading="lazy">
+                        </div>
+                        <div class="main-visual__slide">
+                            <img src="assets/images/photo/mainvisual-03.png" class="main-visual__slide-img" alt="" loading="lazy">
+                        </div>
+                        <div class="main-visual__slide">
+                            <img src="assets/images/photo/mainvisual-04.png" class="main-visual__slide-img" alt="" loading="lazy">
+                        </div>
+                    </div>
+                </section>
+            
+            <!-- works -->
+                <section id="works" class="section section--works">
+                    <h2 class="section-title">WORKS</h2>
+                    <div class="works__list">
+                        <!-- sandai -->
+                        <article class="works__item">
+                            <div class="works__summary works__summary--sandai">
+                                <div class="works__flex-container">
+                                    <figure class="works__img">
+                                        <img src="assets/images/photo/works-client-work_sandai.svg" alt="">
+                                    </figure>
+                                    <div class="works__body">
+                                        <p class="works__tag">#Client Work -卒業制作-</p>
+                                        <h3 class="works__name">株式会社さんだい 名刺サービス LP</h3>
+                                        <p class="works__scope">企画 / デザイン / コーディング / サーバー設定（さくらレンタルサーバー）・ ドメイン取得・SSL設定</p>
+                                        <button type="button" class="works__btn c-btn-toggle js-toggle-btn" aria-expanded="false" aria-controls="works-detail-sandai">
+                                            <span class="c-btn-toggle__text">詳しく見る</span>
+                                            <span class="c-btn-toggle__icon">
+                                                <img src="assets/images/parts/icon_plus.svg" class="icon-plus" alt="" aria-hidden="true">
+                                                <img src="assets/images/parts/icon_minus.svg" class="icon-minus" alt="" aria-hidden="true" style="display: none;">
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="works-detail-sandai" class="works__detail" aria-hidden="true">
+                                <div class="works__detail-flex">
+                                    <div class="works__detail-left">
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">概要</h4>
+                                            <p class="works__detail-text">地域密着型の印刷会社LPを制作。現場の業務理解を活かし、対面対応の信頼感を伝えるデザインを目指しました。</p>
+                                        </div>
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">ターゲット</h4>
+                                            <p class="works__detail-text">近隣在住、または起業した人。昔からの取引先ではなく新規顧客。</p>
+                                        </div>
+                                        <div class="works__detail-block works__detail-block--duration">
+                                            <h4 class="works__detail-title works__detail-title--duration">制作期間</h4>
+                                            <dl class="works__duration">
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">WF</dt>
+                                                    <dd class="works__duration-data">2週間</dd>
+                                                </div>
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">デザイン</dt>
+                                                    <dd class="works__duration-data">2週間</dd>
+                                                </div>
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">コーディング</dt>
+                                                    <dd class="works__duration-data">4週間</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">使用ツール</h4>
+                                            <p class="works__detail-text">Figma /  HTML / CSS(BEM) / Java Script / GitHub</p>
+                                        </div>
+                                    </div>
+                                    <div class="works__detail-right">
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">工夫した点</h4>
+                                            <p class="works__detail-text">
+                                                セマンティックHTMLとBEM命名で構造を整理しました。モバイルファーストの1ファイルレスポンシブ設計です。<br>
+                                                モバイルは全画面ナビをハンバーガーメニュー開閉、PCは水平ナビに切替ています。<br>
+                                                ヒーローはロゴ・コピー・人物をレイヤーにて分離し、背景はcoverでリフローを抑制しています。サービス／用紙紹介はカード化し、aspect-ratio＋object-fitで画像崩れを防止しています。<br>
+                                                注文〜納期〜価格セクションは段階UIで理解負荷を軽減させ、CTAボタンはmailtoと外部サイトボタンで遷移を最短化しました。最小限のJava Scriptで動線を担保し、alt等の基礎アクセシビリティも整えています。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 外部リンクボタン -->
+                                <a href="https://sandai-lp.com" class="works__site-btn c-btn-toggle" target="_blank" rel="noopener noreferrer">
+                                    <span class="works__site-btn-text c-btn-toggle__text">サイトを見る</span>
+                                    <span class="works__site-btn-icon c-btn-toggle__icon">
+                                        <img src="assets/images/parts/icon_arrow-blue.svg" alt="" aria-hidden="true">
+                                    </span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- portfolio -->
+                        <article class="works__item">
+                            <div class="works__summary works__summary--portfolio">
+                                <div class="works__flex-container">
+                                    <figure class="works__img">
+                                        <img src="assets/images/photo/works-portfolio.svg" class="works__img" alt="">
+                                    </figure>
+                                    <div class="works__body">
+                                        <p class="works__tag">#Portfolio</p>
+                                        <h3 class="works__name">ポートフォリオ</h3>
+                                        <p class="works__scope">企画 / デザイン / コーディング / サーバー設定（さくらレンタルサーバー）・ ドメイン取得・SSL設定</p>
+                                        <button type="button" class="works__btn c-btn-toggle js-toggle-btn" aria-expanded="false" aria-controls="works-detail-portfolio">
+                                            <span class="c-btn-toggle__text">詳しく見る</span>
+                                            <span class="c-btn-toggle__icon">
+                                                <img src="assets/images/parts/icon_plus.svg" class="icon-plus" alt="" aria-hidden="true">
+                                                <img src="assets/images/parts/icon_minus.svg" class="icon-minus" alt="" aria-hidden="true" style="display: none;">
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="works-detail-portfolio" class="works__detail" aria-hidden="true">
+                                <div class="works__detail-flex">
+                                    <div class="works__detail-left">
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">概要</h4>
+                                            <p class="works__detail-text">転職活動のために制作しました。</p>
+                                        </div>
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">ターゲット</h4>
+                                            <p class="works__detail-text">採用担当者の方々。</p>
+                                        </div>
+                                        <div class="works__detail-block works__detail-block--duration">
+                                            <h4 class="works__detail-title works__detail-title--duration">制作期間</h4>
+                                            <dl class="works__duration">
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">WF</dt>
+                                                    <dd class="works__duration-data">2日間</dd>
+                                                </div>
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">デザイン</dt>
+                                                    <dd class="works__duration-data">3日間</dd>
+                                                </div>
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">コーディング</dt>
+                                                    <dd class="works__duration-data">2週間</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">使用ツール</h4>
+                                            <p class="works__detail-text">Figma /  HTML / CSS(BEM) / Java Script / GitHub</p>
+                                        </div>
+                                    </div>
+                                    <div class="works__detail-right">
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">工夫した点</h4>
+                                            <p class="works__detail-text">
+                                                「保守性と再現性」を追求した実装を行いました。デザインの意図を正確に形にするため、CSS設計にはBEMを採用し、コンポーネント化を意識した管理しやすいコードを構築しています。
+                                                特にレスポンシブ対応では、単に要素を並べるだけでなく、FlexboxやGridを使い分け、中身のコンテンツ量に左右されない柔軟なレイアウトを実現しました。<br>
+                                                また、実務での運用を想定し、後からの修正や機能追加が容易な「メンテナンス性の高い構造」を意識しています。<br>
+                                                細かな余白やタイポグラフィの再現といったデザインへのこだわりを、論理的なコードによって支える実装を心がけました。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="works__links">
+                                    <a href="https://github.com/takemura-cloud/Portfolio-Site--takemura" class="works__link-btn works__link-btn--github" target="_blank">
+                                        <span class="works__link-btn-text works__link-btn-text--github">GitHub</span>
+                                        <span class="works__link-btn-icon">
+                                            <img src="assets/images/parts/icon_arrow-white.svg" alt="" aria-hidden="true">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- weather app -->
+                        <article class="works__item">
+                            <div class="works__summary works__summary--weather-app">
+                                <div class="works__flex-container">
+                                    <figure class="works__img">
+                                        <img src="assets/images/photo/works-weather-api.svg" class="works__img" alt="">
+                                    </figure>
+                                    <div class="works__body">
+                                        <p class="works__tag">#API Demo</p>
+                                        <h3 class="works__name">天気情報ミニアプリ（Open-Meteo API）</h3>
+                                        <p class="works__scope">デザイン / コーディング</p>
+                                        <button type="button" class="works__btn c-btn-toggle js-toggle-btn" aria-expanded="false" aria-controls="works-detail-weather-app">
+                                            <span class="c-btn-toggle__text">詳しく見る</span>
+                                            <span class="c-btn-toggle__icon">
+                                                <img src="assets/images/parts/icon_plus.svg" class="icon-plus" alt="" aria-hidden="true">
+                                                <img src="assets/images/parts/icon_minus.svg" class="icon-minus" alt="" aria-hidden="true" style="display: none;">
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="works-detail-weather-app" class="works__detail" aria-hidden="true">
+                                <div class="works__detail-flex">
+                                    <div class="works__detail-left">
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">概要</h4>
+                                            <p class="works__detail-text">非同期処理の仕組みを理解するため、API取得を実装しました。</p>
+                                        </div>
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">ターゲット</h4>
+                                            <p class="works__detail-text">都内在住で外出が多く、朝の短時間で天気を確認したい人</p>
+                                        </div>
+                                        <div class="works__detail-block works__detail-block--duration">
+                                            <h4 class="works__detail-title works__detail-title--duration">制作期間</h4>
+                                            <dl class="works__duration">
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">WF</dt>
+                                                    <dd class="works__duration-data">2時間</dd>
+                                                </div>
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">デザイン</dt>
+                                                    <dd class="works__duration-data">2時間</dd>
+                                                </div>
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">コーディング</dt>
+                                                    <dd class="works__duration-data">1時間</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">使用ツール</h4>
+                                            <p class="works__detail-text">Figma / HTML / CSS(BEM) / Java Script / Fetch API / Open-Meteo API / GitHub</p>
+                                        </div>
+                                    </div>
+                                    <div class="works__detail-right">
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">工夫した点</h4>
+                                            <p class="works__detail-text">
+                                                既存の静的コーディング作品に加え、動的処理への理解を深めるため外部API（Open-Meteo）を用いた天気アプリを制作しました。<br>
+                                                fetchとasync/awaitによる非同期通信を実装し、地名検索から緯度経度取得、天気データ取得までの流れを設計しています。APIレスポンスから必要なデータのみを抽出し、UIへ反映。エラー時にはメッセージ表示を行うなど、分岐処理も組み込みました。静的なレイアウト制作とは異なり、「データ取得→加工→表示」の一連の流れを意識した構成が本作の工夫です。<br>
+                                                公開を前提としたため、APIキーが不要なサービスを選定しました。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="works__links">
+                                    <a href="https://github.com/takemura-cloud/weather-app" class="works__link-btn works__link-btn--github" target="_blank">
+                                        <span class="works__link-btn-text works__link-btn-text--github">GitHub</span>
+                                        <span class="works__link-btn-icon">
+                                            <img src="assets/images/parts/icon_arrow-white.svg" alt="" aria-hidden="true">
+                                        </span>
+                                    </a>
+                                    <a href="https://takemura-cloud.github.io/weather-app/" class="works__link-btn works__link-btn--demo" target="_blank">
+                                        <span class="works__link-btn-text works__link-btn-text--demo">Demo</span>
+                                        <span class="works__link-btn-icon">
+                                            <img src="assets/images/parts/icon_arrow-blue.svg" alt="" aria-hidden="true">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- lavene -->
+                        <article class="works__item">
+                            <div class="works__summary works__summary--lavene">
+                                <div class="works__flex-container">
+                                    <figure class="works__img">
+                                        <img src="assets/images/photo/works-concept-work_lavene.svg" class="works__img" alt="">
+                                    </figure>
+                                    <div class="works__body">
+                                        <p class="works__tag">#Concept Work</p>
+                                        <h3 class="works__name">化粧品ブランドサイト（架空）</h3>
+                                        <p class="works__scope">デザイン / コーディング</p>
+                                        <button type="button" class="works__btn c-btn-toggle js-toggle-btn" aria-expanded="false" aria-controls="works-detail-lavene">
+                                            <span class="c-btn-toggle__text">詳しく見る</span>
+                                            <span class="c-btn-toggle__icon">
+                                                <img src="assets/images/parts/icon_plus.svg" class="icon-plus" alt="" aria-hidden="true">
+                                                <img src="assets/images/parts/icon_minus.svg" class="icon-minus" alt="" aria-hidden="true" style="display: none;">
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="works-detail-lavene" class="works__detail" aria-hidden="true">
+                                <div class="works__detail-flex">
+                                    <div class="works__detail-left">
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">概要</h4>
+                                            <p class="works__detail-text">架空の化粧品ブランドサイトとして、「癒しと美しさ」を表現。視覚・導線設計を通じて共感と購買意欲を高めるサイトを目指しました。</p>
+                                        </div>
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">ターゲット</h4>
+                                            <p class="works__detail-text">30代前半の女性会社員。自然由来の香りやスキンケアが癒し。 </p>
+                                        </div>
+                                        <div class="works__detail-block works__detail-block--duration">
+                                            <h4 class="works__detail-title works__detail-title--duration">制作期間</h4>
+                                            <dl class="works__duration">
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">WF</dt>
+                                                    <dd class="works__duration-data">2週間</dd>
+                                                </div>
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">デザイン</dt>
+                                                    <dd class="works__duration-data">2週間</dd>
+                                                </div>
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">コーディング</dt>
+                                                    <dd class="works__duration-data">4週間</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">使用ツール</h4>
+                                            <p class="works__detail-text">Figma /  HTML / CSS(BEM) / Java Script / GitHub</p>
+                                        </div>
+                                    </div>
+                                    <div class="works__detail-right">
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">工夫した点</h4>
+                                            <p class="works__detail-text">
+                                                セマンティックHTMLとBEM設計で保守性を意識し、構造を整理しています。<br>
+                                                モバイルはハンバーガーメニュー開閉、PCではフル表示に切り替え、1ファイルでレスポンシブに対応しています。<br>
+                                                トップはslickで自動スライダーを実装し、スクロール時のフェードインで動きを付与しました。商品詳細はモーダルで開閉を制御し、×や外側クリックにも対応しています。<br>
+                                                レビューセクションでは自作スライダー＋ドットインジケータ連動で軽量化を図っています。<br>
+                                                ページトップボタンはスムーススクロールでUXを高め、全体として視覚的演出と操作感の両立を意識しています。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="works__links">
+                                    <a href="https://takemura-cloud.github.io/LAVENE---Portfolio-Site/" class="works__link-btn works__link-btn--github" target="_blank">
+                                        <span class="works__link-btn-text works__link-btn-text--github">GitHub</span>
+                                        <span class="works__link-btn-icon">
+                                            <img src="assets/images/parts/icon_arrow-white.svg" alt="" aria-hidden="true">
+                                        </span>
+                                    </a>
+                                    <a href="https://takemura-cloud.github.io/LAVENE---Portfolio-Site/lavene/" class="works__link-btn works__link-btn--demo" target="_blank">
+                                        <span class="works__link-btn-text works__link-btn-text--demo">Demo</span>
+                                        <span class="works__link-btn-icon">
+                                            <img src="assets/images/parts/icon_arrow-blue.svg" alt="" aria-hidden="true">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <div class="works__footer">
+                            <button type="button" class="works__more-btn c-btn-toggle js-toggle-btn" aria-expanded="false" aria-controls="works-all">
+                                 <span class="c-btn-toggle__text">すべて見る</span>
+                                 <span class="c-btn-toggle__icon">
+                                        <img src="assets/images/parts/icon_plus.svg" class="icon-plus" alt="" aria-hidden="true">
+                                        <img src="assets/images/parts/icon_minus.svg" class="icon-minus" alt="" aria-hidden="true" style="display: none;">
+                                    </span>
+                            </button>
+                        </div>
+                        <div id="works-all" class="works__item--secondary">
+                            <div class="works__item--secondary__flex-container">
+                                <div class="works__item--secondary-left">
+                                    <div class="works__summary--secondary">
+                                        <img src="assets/images/photo/works_04_concept-work_iroirotablieware.svg" class="works__img" alt="">
+                                        <p class="works__tag">#Concept Work</p>
+                                        <h3 class="works__name">食器ブランドサイト（架空）</h3>
+                                        <p class="works__scope">デザイン / コーディング</p>
+                                    </div>
+                                    <div class="works__detail--secondary">
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">概要</h4>
+                                            <p class="works__detail-text">色彩豊かな食器を展開する架空のブランドサイト。ブランドの魅力を視覚的・感覚的に伝えるデザインにしました。EC機能を実装予定のため、学習中です。</p>
+                                        </div>
+                                        <div class="works__detail-block works__detail-block--duration">
+                                            <h4 class="works__detail-title works__detail-title--duration">制作期間</h4>
+                                            <dl class="works__duration">
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">WF</dt>
+                                                    <dd class="works__duration-data">1週間</dd>
+                                                </div>
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">デザイン</dt>
+                                                    <dd class="works__duration-data">1週間</dd>
+                                                </div>
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">コーディング</dt>
+                                                    <dd class="works__duration-data">3週間</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">使用ツール</h4>
+                                            <p class="works__detail-text">Figma /  HTML / CSS(BEM) / Java Script / GitHub</p>
+                                        </div>
+                                    </div>
+                                    <div class="works__links--secondary">
+                                        <a href="https://takemura-cloud.github.io/iroiro-tableware---Portfolio-Site/" class="works__link-btn works__link-btn--github" target="_blank">
+                                            <span class="works__link-btn-text works__link-btn-text--github">GitHub</span>
+                                            <span class="works__link-btn-icon">
+                                                <img src="assets/images/parts/icon_arrow-white.svg" alt="" aria-hidden="true">
+                                            </span>
+                                        </a>
+                                        <a href="https://takemura-cloud.github.io/iroiro-tableware---Portfolio-Site/iroiro_tableware/" class="works__link-btn works__link-btn--demo" target="_blank">
+                                            <span class="works__link-btn-text works__link-btn-text--demo">Demo</span>
+                                            <span class="works__link-btn-icon">
+                                                <img src="assets/images/parts/icon_arrow-blue.svg" alt="" aria-hidden="true">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="works__item--secondary-right">
+                                    <div class="works__summary--secondary">
+                                        <img src="assets/images/photo/works_05_middle-assignment_sugutabe.svg" class="works__img" alt="">
+                                        <p class="works__tag">#Middle Assignment（中間課題）</p>
+                                        <h3 class="works__name">野菜宅配サービス　スグ食べ LP</h3>
+                                        <p class="works__scope">デザイン / コーディング</p>
+                                    </div>
+                                    <div class="works__detail--secondary">
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">概要</h4>
+                                            <p class="works__detail-text">デジタルハリウッドSTUDIOの課題である架空LPです。食へのこだわりが強い層に響くような内容にし、お試し購入につなげる目的の構成です。</p>
+                                        </div>
+                                        <div class="works__detail-block works__detail-block--duration">
+                                            <h4 class="works__detail-title works__detail-title--duration">制作期間</h4>
+                                            <dl class="works__duration">
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">WF</dt>
+                                                    <dd class="works__duration-data">2週間</dd>
+                                                </div>
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">デザイン</dt>
+                                                    <dd class="works__duration-data">2週間</dd>
+                                                </div>
+                                                <div  class="works__duration-item">
+                                                    <dt class="works__duration-label">コーディング</dt>
+                                                    <dd class="works__duration-data">4週間</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                        <div class="works__detail-block">
+                                            <h4 class="works__detail-title">使用ツール</h4>
+                                            <p class="works__detail-text">Figma /  HTML / CSS(BEM) / Java Script / GitHub</p>
+                                        </div>
+                                    </div>
+                                    <div class="works__links--secondary">
+                                        <a href="https://takemura-cloud.github.io/middle-assignment/" class="works__link-btn works__link-btn--github" target="_blank">
+                                            <span class="works__link-btn-text works__link-btn-text--github">GitHub</span>
+                                            <span class="works__link-btn-icon">
+                                                <img src="assets/images/parts/icon_arrow-white.svg" alt="" aria-hidden="true">
+                                            </span>
+                                        </a>
+                                        <a href="https://takemura-cloud.github.io/middle-assignment/sugutabe/" class="works__link-btn works__link-btn--demo" target="_blank">
+                                            <span class="works__link-btn-text works__link-btn-text--demo">Demo</span>
+                                            <span class="works__link-btn-icon">
+                                                <img src="assets/images/parts/icon_arrow-blue.svg" alt="" aria-hidden="true">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                    </div>
+                        </div>
+                    </div>
+                </section>
+            
+            <!-- profile -->
+                <section id="profile" class="section section--profile">
+                    <h2 class="section-title">PROFILE</h2>
+                    <div class="profile__flex-container">
+                        <div class="profile__img-wrap">
+                            <img src="assets/images/photo/self-portrait.png" alt="竹村千紘の自画像">
+                        </div>
+                        <div class="profile__detail">
+                            <div class="profile__name-wrap">
+                                <span class="profile__name-en">Takemura Chihiro</span>
+                                <h3 class="profile__name-ja">竹村　千紘</h3>
+                            </div>
+                            <p class="profile__bio"> 
+                                1986年生まれ。栃木県出身。女子美術大学芸術学部芸術学科卒業。<br>
+                                卒業後は、窓回り製品メーカーにて販促ツール制作、品質試験機関にて品質評価試験業務などを担当。<br>
+                                2024年8月 デジタルハリウッドSTUDIO by LIGにて Webデザインコースを修了。<br>
+                                ルールに基づいて形を構築するWeb制作に魅力を感じ、BEM命名規則やレスポンシブ設計を用いた保守性を意識したコーディングを行っています。<br>
+                                これまでに培った経験も合わせてデザインの意図を理解し、正確で再現性の高い実装をできるよう、学習を続けています。
+                            </p>
+                        </div>
+                    </div>
+                    <button type="button" class="profile__btn c-btn-toggle js-toggle-btn" aria-expanded="false" aria-controls="profile-more">
+                        <span class="profile__btn-text c-btn-toggle__text">詳しく見る</span>
+                        <span class="c-btn-toggle__icon">
+                                        <img src="assets/images/parts/icon_plus.svg" class="icon-plus" alt="" aria-hidden="true">
+                                        <img src="assets/images/parts/icon_minus.svg" class="icon-minus" alt="" aria-hidden="true" style="display: none;">
+                                    </span>
+                    </button>
+                    <div id="profile-more" class="profile-more" aria-hidden="true">
+                        <div class="profile__values">
+                            <h4 class="profile__subtitle-en">VALUES<span class="profile__subtitle-ja">わたしの強み</span></h4>
+                            <div class="profile__value-list">
+                                <div class="profile__value-item">
+                                    <img src="assets/images/illust/ill_values_01_design.PNG" alt="" class="profile__value-visual">
+                                    <div class="profile__value-subtitle">意図を汲む力</div>
+                                    <p class="profile__value-text">
+                                        依頼者やデザインの背景にある意図を正確に読み取り、目的に沿った実装を行うことを大切にしています。スキルマーケットサイトでのイラスト制作で培ったヒアリング経験を活かし、すり合わせをこまめに行うことで認識のズレを減らす工夫をしています。
+                                    </p>
+                                </div>
+                                <div class="profile__value-item">
+                                    <img src="assets/images/illust/ill_values_02_quality.PNG" alt="" class="profile__value-visual">
+                                    <div class="profile__value-subtitle">丁寧さと継続力</div>
+                                    <p class="profile__value-text">
+                                        未経験分野でもとにかく調べ、理解し、試すことを積み重ねてきました。毎朝家族が起きる前の１時間を自主学習の時間とし、限られた時間の中で効率よく丁寧に、継続して学び続けています。
+                                    </p>
+                                </div>
+                                <div class="profile__value-item">
+                                    <img src="assets/images/illust/ill_values_03_team.PNG" alt="" class="profile__value-visual">
+                                    <div class="profile__value-subtitle">チームで進める対話力</div>
+                                    <p class="profile__value-text">
+                                        年齢や経験を重ねる中で、状況を俯瞰し冷静に対応する姿勢が身につきました。進捗共有や疑問点の解決は早めに行い、急ぎの場面でも相手の立場を踏まえて対応することで信頼関係を築きながら業務を進めることを大切にしています。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile__skills">
+                            <h4 class="profile__subtitle-en">SKILLS<span class="profile__subtitle-ja">いまできること</span></h4>
+                            <div class="profile__skills-list">
+                                <div class="profile__skills-item">
+                                    <span class="profile__skill-name">HTML / CSS</span>
+                                    <p class="profile__skill-text">セマンティクスを意識したHTML設計と、BEMを用いたCSS設計を行えます。レスポンシブ対応や保守性を意識し、あとから他の人が見ても理解しやすい構造でのマークアップを心がけています。使用しているエディターはVisual Studio Codeです。</p>
+                                </div>
+                                <div class="profile__skills-item">
+                                    <span class="profile__skill-name">JavaScript</span>
+                                    <p class="profile__skill-text">JavaScriptとjQueryを使用してナビゲーションの開閉、モーダル、スライダーなどのUI実装が可能です。動きだけでなく、HTML構造やアクセシビリティへの影響も考慮しながら実装しています。</p>
+                                </div>
+                                <div class="profile__skills-item">
+                                    <span class="profile__skill-name">Git / Git Hub</span>
+                                    <p class="profile__skill-text">GitHubを用いたソースコード管理が可能です。変更内容ごとにコミットすることを意識し、作業履歴がわかりやすく残るよう心がけています。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile__reason">
+                            <h4 class="profile__subtitle-en profile__subtitle-en--reason">Why Frontend engineer / Coder<span class="profile__subtitle-ja">フロントエンドエンジニア/コーダーを目指す理由</span></h4>
+                            <p class="profile__reason-text">学生時代にデザインを学んだ経験や、イラスト制作をきっかけにWebに興味を持ちました。そこから、明確なルールに基づいて形を作るコーディングに強い適性を感じ、フロントエンドエンジニアを志望しました。模写やアレンジ経験に加え、LP/HPの分析を行うことで設計意図を読み解き、再現する力を磨いています。今後は再現性と保守性を意識した実装で、ユーザーに届くサービス作りに貢献したいと考えています。</p>
+                        </div>
+                    </div>
+                </section>
+
+            <!-- conclusion -->
+                <section id="conclusion" class="section section--conclusion">
+                    <h2 class="section-title">おわりに</h2>
+                    <div class="conclusion__body">
+                        <h3 class="section-subtitle section-subtitle--conclusion">これまでの学習と制作を通して</h3>
+                        <p class="conclusion__text">「意図を理解し、正確に再現すること」に自分の強みと興味があると実感しました。まだ経験は浅いですが、コードの読みやすさや保守性、チームで進めやすい情報整理など、地に足のついた部分から積み上げていきたいです。</p>
+                    </div>
+                    <div class="conclusion__body">
+                        <h3 class="section-subtitle section-subtitle--conclusion">丁寧な実装ができるエンジニアを目指して</h3>
+                        <p class="conclusion__text">今後は、再現性と保守性を両立したコーディングを軸にしながら、丁寧な実装ができるエンジニアを目指しています。</p>
+                        <p class="conclusion__text">「安心して任せてもらえる関係を作る力」を今後の強みにし、デザイナーやディレクターと細かく擦り合わせをしながら、一緒に仕事をする人たちが作業しやすいよう情報を整理することで、チームで同じ方向を向きながら業務をできるような環境づくりに関わっていきたいです。</p>
+                    </div>
+                </section>
+
+            <!-- thanks message -->
+             <p class="c-thanks-message">ここまでご覧いただき、<br class="spBr">ありがとうございました。</p>
+            
+            <!-- contact -->
+                <section id="contact" class="section section--contact">
+                    <h2 class="section-title section-title--contact">CONTACT</h2>
+                    <p class="contact__text">下記のメールアドレスにお気軽にご連絡ください。</p>
+                    <p class="contact__address">
+                        <a href="mailto:qianhongzhucun0@gmail.com" class="contact__link">qianhongzhucun0@gmail.com</a>
+                    </p>
+                </section>            
+            </article>
+        </main>
+        <footer class="footer">
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#works" class="c-nav-link">WORKS</a></li>
+                    <li class="footer__item"><a href="#profile" class="c-nav-link">PROFILE</a></li>
+                    <li class="footer__item"><a href="#contact" class="c-nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+            <p class="copy"><small>&copy; 2026 TAKEMURA CHIHIRO</small></p>
+        </footer>
+        
+        <button id="js-pagetop" class="c-pagetop-btn" type="button" aria-label="ページトップへ戻る">
+            <span class="c-pagetop-btn__icon"><img src="assets/images/parts/icon_arrow.svg" alt=""></span>
+            <span class="c-pagetop-btn__text">TOP</span>
+        </button>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

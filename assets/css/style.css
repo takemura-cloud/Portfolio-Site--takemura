@@ -1,0 +1,746 @@
+@charset "utf-8";
+/*==========================
+common
+==========================*/
+
+/* 全ての要素に対してサイズ計算にpaddingを含める指定 */
+* {
+    box-sizing: border-box;
+}
+
+/* 各セクションなど、中身を左右に寄せたい場合ここを調整 */
+header {
+    width: 100%;
+    padding-left: var(--contentPadding);
+    padding-right: var(--contentPadding);
+}
+
+:root {
+    --contentWidth: 91.4%;
+    --contentPadding: 4.2%;
+    --contentPaddingVertical: 5vw;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+     padding: 
+        var(--contentPaddingVertical)
+        var(--contentPadding) 0
+        var(--contentPadding);
+    font-family:
+        'Noto Sans JP',
+        Arial,
+        'Zen Old Mincho';
+        font-size: 1.6rem;
+    font-style: normal;
+    color: #2D2D2D;
+    letter-spacing: 0.05em;
+    line-height: 1.9;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-title {
+    margin: 70px 0 70px;
+    text-align: left;
+    font-size: clamp(3rem,36px,4.8rem);
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0.06em;
+}
+
+/* margin-bottom: 10px・フォントサイズ24pt・600 */
+.works__detail-title ,
+.profile__value-subtitle,
+.section-subtitle--conclusion {
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* bodyのpaddingを打ち消して画面端まで広げる */
+.works__summary,
+.works__summary--secondary,
+.section--contact {
+    padding: 5em 25px 5em;
+    margin-right: calc(var(--contentPadding)*-1);
+    margin-left: calc(var(--contentPadding)*-1);
+}
+
+/* ボタン共通 */
+.c-btn-toggle {
+    display: flex;
+    justify-content: center;
+    width: 230px;
+    margin: 5em auto 0;
+    padding: 25px 30px;
+    border: solid 1px #2D2D2D;
+    border-radius: 50px;
+    background-color: #ffffff;
+}
+.c-btn-toggle__text {
+    padding-right: 20px;
+    font-size: 2rem;
+}
+.c-btn-toggle__icon {
+    width: 27px;
+    height: auto;
+}
+
+/* common pc */
+@media screen and (min-width:769px) {
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    body {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: clamp(4.4rem,56px,6.4rem);
+    }
+
+    /* ボタン共通 */
+    .c-btn-toggle {
+        width: 340px;
+        margin: 2em 0;
+        padding: 25px 65px;
+        border-radius: 100px;
+    }
+
+    .c-btn-toggle__text {
+        padding-right: 30px;
+        font-size: 2.4rem;
+    }
+
+    .c-btn-toggle__icon {
+        width: 30px;
+    }
+
+    /* ボタン中央配置 */
+    .works__more-btn,
+    .profile__btn {
+        margin: 3em auto;
+    }
+}
+
+/* common pc end */
+
+/*==========================
+header
+==========================*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    margin: 0 25px;
+    z-index: 10;
+}
+
+.site-title{
+    font-size: 3.6rem;
+    font-weight: 700;
+}
+
+/* .nav初期表示 */
+.nav {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.7);
+}
+
+/* .nav.active表示 */
+.nav.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    box-sizing: border-box;
+    max-width: 90%;
+    max-height: 80vh;
+    width: 337px;
+    height: 419px;
+    padding: 100px 60px;
+    background-color: #ffffff;
+}
+
+.c-nav-link {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.nav__list {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* header pc */
+@media screen and (min-width:769px) {
+    .header {
+        width: 100%;
+    }
+    
+    .nav__btn.nav__btn--open {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: flex-end;
+        position: static;
+        transform: none;
+        background-color: transparent;
+    }
+
+    .nav__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
+        margin-top: 10px;
+        padding: 0;
+        width: auto;
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        background-color: transparent;
+    }
+}
+
+/* header pc end */
+
+
+/*==========================
+main visual
+==========================*/
+.section--main-visual {
+    position: relative;
+    left: 54%;
+    transform: translateX(-50%);
+    margin-top: calc(var(--contentPaddingVertical)*-1);
+    margin-right: calc(var(--contentPadding)*-1);
+    margin-left: calc(var(--contentPadding)*-1);
+}
+
+.section-title--main-visual {
+    margin: 1em 0 0;
+}
+
+.main-visual__slide img {
+    object-position: 66% 10%;
+    aspect-ratio: 1/1.6;
+    object-fit: cover;
+}
+
+.main-visual__content {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    z-index: 1;
+    margin-left: 25px;
+}
+
+.main-visual__slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 1/1.6;
+}
+
+.main-visual__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fadeLoop 20s infinite;
+}
+
+.main-visual__slide:nth-child(1) {
+    animation-delay: 0s;
+}
+.main-visual__slide:nth-child(2) {
+    animation-delay: 5s;
+}
+.main-visual__slide:nth-child(3) {
+    animation-delay: 10s;
+}
+.main-visual__slide:nth-child(4) {
+    animation-delay: 15s;
+}
+
+@keyframes fadeLoop {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    33% { opacity: 1; }
+    43% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* main visual pc */
+@media screen and (min-width:769px) {
+    .main-visual__slider {
+        aspect-ratio: 1.7/1;
+    }
+
+    .main-visual__slide img {
+        object-position: 66% 60%;
+        aspect-ratio: 1.7/1;
+    }
+
+    .main-visual__content {
+        top: 26%;
+        left: 4%;
+    }
+
+}
+
+/* main visual pc end */
+
+/*==========================
+works
+==========================*/
+.works__detail-title {
+    margin-top: 20px;
+}
+
+.works__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.works__summary.works__summary--sandai,
+.works__summary.works__summary--weather-app {
+    background-color: #FFFAF3;
+}
+
+.works__summary--portfolio,
+.works__summary.works__summary--lavene {
+    background-color: #DCE8EA;
+}
+
+.works__img {
+    margin-bottom: 1em;
+}
+
+.works__tag {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.works__name {
+    margin-bottom: 20px;
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.works__detail {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: 2em 0 5em;
+}
+
+.works__duration-item {
+    display: flex;
+    gap: 2em;
+}
+
+.works__more-btn {
+    margin-bottom: 5em;
+}
+
+/* works__summary--secondary */
+.works__summary--secondary {
+    margin-bottom: 5em;
+    background-color: #FFF5EE;
+}
+
+.works__item--secondary__flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+}
+
+.works__links,
+.works__links--secondary {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1em,25px,3em);
+    margin-top: 3em;
+}
+
+.works__link-btn--github,
+.works__link-btn--demo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-radius: 50px;
+    padding: 10px 2em;
+}
+
+.works__link-btn--github {
+    background-color: #5F878E;
+}
+
+.works__link-btn-text {
+    margin-right: 0.5em;
+}
+
+.works__link-btn-text--github {
+    color: #ffffff;
+}
+
+.works__link-btn--demo {
+    border: solid 1px #5F878E;
+}
+
+.works__link-btn-icon {
+    min-width: 27px;
+}
+
+/* works pc */
+@media screen and (min-width:769px) {
+    .works__flex-container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        gap: 3em;
+    }
+
+    .works__detail-flex {
+        display: flex;
+        align-items: flex-start;
+        gap: 3em;
+    }
+
+    .works__detail-left {
+        flex: 2;
+    }
+
+    .works__detail-right {
+        flex: 3;
+    }
+
+    .works__site-btn {
+        width: fit-content;
+        margin-left: auto;
+    }
+
+    .works__links,
+    .works__links--secondary {
+        margin-left: auto;
+        width: fit-content;
+    }
+
+    
+    .works__img {
+        flex: 3;
+    }
+    
+    .works__body {
+        flex: 2;
+    }
+    
+    .works__tag {
+        font-size: 1.6rem;
+    }   
+}
+
+@media screen and (min-width:1025px) {
+        .works__item--secondary__flex-container {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            gap: 3em !important;
+        }
+        .works__item--secondary-left,
+        .works__item--secondary-right {
+            min-width: 0;
+            overflow-wrap: break-word;
+        }
+
+    }
+/* works pc end */
+/*==========================
+profile
+==========================*/
+.section--profile {
+    margin-bottom: 100px;
+}
+
+.profile__img-wrap {
+    margin-bottom: 50px;
+}
+
+.profile__name-en {
+    color: #F68503;
+}
+
+.profile__name-ja {
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+.profile__name-wrap {
+    margin-bottom: 40px;
+}
+
+.profile__btn {
+    margin-bottom: 5em;
+}
+
+.profile-more {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.profile__subtitle-en {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+    font-size: 3.6rem;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.profile__skills,
+.profile__reason {
+    margin-top: 3em;
+}
+
+
+.profile__subtitle-en--reason {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profile__subtitle-ja {
+    margin-left: 15px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #999999;
+}
+
+.profile__value-list,
+.profile__skills-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile__value-visual {
+    display: flex;
+    margin: 0 auto;
+}
+
+.profile__skills-list {
+    gap: 60px;
+}
+
+.profile__skills-list {
+    gap: 20px;
+}
+
+.profile__skill-name {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #F68503;
+}
+
+
+/* profile pc */
+@media screen and (min-width:769px) {
+    .profile__flex-container {
+        display: flex;
+        gap: 2em;
+    }
+
+    .profile__skills,
+    .profile__reason {
+        margin-top: 4em;
+    }
+}
+
+@media screen and (min-width:1025px) {
+      .profile__value-list {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 5em;
+    }
+    
+}
+/* profile pc end */
+
+/*==========================
+conclusion
+==========================*/
+.conclusion__body {
+    margin-bottom: 60px;
+}
+
+/*==========================
+thanks message
+==========================*/
+.c-thanks-message {
+    margin: 100px 0;
+    text-align: center;
+}
+
+/*==========================
+contact
+==========================*/
+.section--contact {
+    background-color: #5B4123;
+}
+
+.section-title--contact,
+.contact__text {
+    color: #ffffff;
+}
+
+.section-title--contact {
+    margin: 0 0 1em 0;
+}
+
+.contact__text {
+    margin: 0 0 2.5em 0;
+    text-align: center;
+}
+
+.contact__address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 340px;
+    margin: 0 auto;
+    padding: 25px 4em;
+    border-radius: 50px;
+    background-color: #ffffff;
+}
+
+/* contact pc */
+@media screen and (min-width:769px) {
+    .contact__address {
+        max-width: 500px;
+    }
+}
+/* contact pc  end*/
+
+/*==========================
+footer
+==========================*/
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 0;
+    font-weight: 500;
+}
+
+.footer__nav {
+    margin-bottom: 1em;
+}
+
+.footer__list {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+/* ページトップボタン */
+.c-pagetop-btn {
+    /* 固定位置指定 */
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    /* 非表示状態 */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s,visibility 0.3s;
+    /* レイアウト */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* デザイン */
+    width: 70px;
+    height: 70px;
+    background: #5F878E;
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    outline: 3px solid #5F878E;
+}
+
+/* 表示状態 */
+.c-pagetop-btn.is-show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.c-pagetop-btn::before {
+    content: "";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #fff;
+    border-top: 2px solid #fff;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -25%) rotate(45deg);
+}
+
+    /* ページトップボタン pc */
+    @media screen and (min-width:769px) {
+        .c-pagetop-btn {
+            width: 80px;
+            height: 80px;
+        }
+    }
+    /* ページトップボタン pc end*/
+
+/* 非表示のクラス */
+.works__detail,
+.works__item--secondary,
+.profile-more {
+    display: none ;
+}
+
+.works figure {
+    margin: 0;
+}
