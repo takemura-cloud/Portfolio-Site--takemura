@@ -339,12 +339,12 @@ works
 }
 
 .works__summary.works__summary--sandai,
-.works__summary.works__summary--weather-app {
+.works__summary.works__summary--lavene {
     background-color: #FFFAF3;
 }
 
 .works__summary--portfolio,
-.works__summary.works__summary--lavene {
+.works__summary.works__summary--weather-app {
     background-color: #DCE8EA;
 }
 
